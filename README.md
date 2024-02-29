@@ -17,13 +17,23 @@ If virtualenvwrapper-win is config'ed properly, this script will replicate the f
 
 - workon : lists all environemnts
 - workon <environment_name> : activates the environment
-- workoncd <environment_name> : activates the environment and changes directory the project IFF you have set the project directory via the setprojectdir command.
+- workoncd <environment_name> : activates the environment and changes directory to the project directory if and only if you have already set the project directory via the *setprojectdir* command per virtualenvwrapper.
 
-You can evoke notepad from within a terminal in Powershell to edit the Powershell profile...
+The simplest way to set the project directory is to cd to the project directory and execute...
+
+    setprojectdir .
+
+To leverage this Powershell profile script, you can edit the profile by evoking notepad from within a terminal in Powershell...
 
     notepad $PROFILE
 
-Be sure to replace <username> with your actual username...
+The cut and paste the script below; be sure to replace <username> with your actual username.
+
+Then save your changes.
+
+Finally, reload the profile with...
+
+    . $PROFILE
 
 ---
 
