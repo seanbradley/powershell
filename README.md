@@ -1,4 +1,4 @@
-# USING WORKON IN POWERSHELL
+# USING VIRTUALENVWRAPPER'S WORKON COMMAND IN POWERSHELL
 Replicating virtualenvwrapper commands in Powershell.
 
 The popular virtualenvwrapper library works way better in Ubuntu than Windows.
