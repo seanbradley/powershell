@@ -1,15 +1,25 @@
 # USING VIRTUALENVWRAPPER'S WORKON COMMAND IN POWERSHELL
 Replicating virtualenvwrapper commands in Powershell.
 
-The popular virtualenvwrapper library works way better in Ubuntu than Windows.
+The popular Pythonic virtualenvwrapper utitlity works way better in Ubuntu than Windows.
 
-Namely, even if you install virtualenvwrapper-win...
+Namely, if you install virtualenvwrapper-win...
 
     pip install virtualenvwrapper-win
 
-...some of the *workon* commands are funky or don't work at all in Windows.
+...the mkvirtualenv and rmvirtualenv commands behave as expected, but some of the *workon* commands are funky or don't work at all.
 
-To get around this, place the script below in your Powershell profile.
+Personally, I've never fully gotten used to the *venv* command in Python, and still prefer using pip and virtualenv to conda. 
+
+Of course, you could simply develop in a containerized environment and bypass all of this mishagos.
+
+But sometimes I like to just dig in and rely on old habits...
+
+(I know: I'm a dinosaur.)
+
+As such, in Windows, I really miss the *workon* commands--because they are super useful for swapping between environments speedily...again, if you're stubbornly gonna use virtualenvs instead of conda's environment and package management.
+
+To get around this limitation and to replicate all the old school Python plus Ubuntu feels, place the script below in your Powershell profile.
 
 The script assumes you have virtualenvwrapper-win installed and all the proper env vars set correctly.
 
@@ -19,23 +29,25 @@ If virtualenvwrapper-win is config'ed properly, this script will replicate the f
 - workon <environment_name> : activates the environment
 - workoncd <environment_name> : activates the environment and changes directory to the project directory if and only if you have already set the project directory via the *setprojectdir* command per virtualenvwrapper.
 
-The simplest way to set the project directory is to cd to the project directory and execute...
+FWIW, the simplest way to set the project directory is to cd to the project directory and execute...
 
     setprojectdir .
 
-To leverage this Powershell profile script, you can edit the profile by evoking notepad from within a terminal in Powershell...
+To edit your Powershell profile, you can evoke notepad from directly within a terminal in Powershell...
 
     notepad $PROFILE
 
-Then cut and paste the script below; be sure to replace *username* with your actual username.
+Then cut and paste in the script below. Be sure to replace *username* with your actual username.
 
-(The script assumes your WORKON_HOME env var is set to C:\Users\username\Envs )
+FYI: The script assumes your WORKON_HOME env var is set to C:\Users\username\Envs
 
-Then save your changes.
+Be sure to save your changes.
 
-Finally, reload the profile with...
+Finally, reload the Poewrshell profile with...
 
     . $PROFILE
+
+Now *workon* will function just like it does on Ubuntu. (Albeit you'll have the additional *workoncd* command.)
 
 ---
 
