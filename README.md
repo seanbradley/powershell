@@ -27,7 +27,9 @@ To leverage this Powershell profile script, you can edit the profile by evoking 
 
     notepad $PROFILE
 
-The cut and paste the script below; be sure to replace <username> with your actual username.
+Then cut and paste the script below; be sure to replace *username* with your actual username.
+
+(The script assumes your WORKON_HOME env var is set to C:\Users\username )
 
 Then save your changes.
 
