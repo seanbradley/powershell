@@ -29,7 +29,7 @@ To leverage this Powershell profile script, you can edit the profile by evoking 
 
 Then cut and paste the script below; be sure to replace *username* with your actual username.
 
-(The script assumes your WORKON_HOME env var is set to C:\Users\username )
+(The script assumes your WORKON_HOME env var is set to C:\Users\username\Envs )
 
 Then save your changes.
 
